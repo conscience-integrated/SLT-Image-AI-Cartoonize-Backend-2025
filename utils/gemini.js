@@ -11,7 +11,15 @@ const TARGET_WIDTH = 720;
 const TARGET_HEIGHT = 1280; // portrait 9:16
 
 const generatePrompt = (style) => {
-  console.log("Prompt:", style);
+  // console.log("Prompt:", style);
+
+  if (style == "3d-animation") {
+    style = "cartoon1";
+  } else if (style == "clay-animation") {
+    style = "cartoon2";
+  } else if (style == "anime") {
+    style = "cartoon3";
+  }
 
   const stylePrompts = {
     cartoon1: `Create a character illustration from this image in the style of a modern Pixar or Disney animated film. The character should have soft, rounded features, large, expressive eyes, and a friendly, inviting expression. Use smooth, subtle shading and a warm, vibrant color palette. The lighting should be soft and cinematic, with a gentle glow that gives it a magical, polished look.`,
